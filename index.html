@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        /* estilos para a página */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Para o cabeçalho estar fixo na parte superior */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para o container principal */
+        .container {
+            padding-top: 100px; /* Para compensar a altura do cabeçalho fixo */
+            max-width:1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Estilos para cada seção */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        /* Estilos para a seção "Sobre Mim" */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about .description {
+            max-width: 500px;
+        }
+
+        /* Estilos para a seção "Portfólio" */
+        .portfolio-item {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .portfolio-item div {
+            width: 200px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            background-color: #ccc; 
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para o formulário de contato */
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact button:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            margin-top: 30px;
+            display: flex; /* Adiciona Flexbox para alinhamento horizontal */
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; /* Espaço entre o ícone e o texto */
+        }
+
+        footer img{
+            width: 20px;
+            height: 20px;
+        }
+
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEU PORTFÓLIO</h1>
+    <nav>
+        <a href="#about">SOBRE MIM</a>
+        <a href="#education">FORMAÇÃO</a>
+        <a href="#portfolio">PORTFÓLIO</a>
+        <a href="#contact">CONTATO</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Seção "Sobre Mim" -->
+    <section id="about" class="section about">
+        <img src="images/fotoPerfil.webp" alt="Minha Foto">
+        <div class="description">
+            <h2>SOBRE MIM</h2>
+            <p>Olá! Me chamo Emilly Bruna, sou estudante de desenvolvimento de sistemas apaixonada pela tecnologia e suas inovações. Além disso, tenho como hobbie treinar, ler e assistir séries. Amo ter novos desafios e estar em constante aprendizado!</p>
+        </div>
+    </section>
+
+    <!--"Formação" -->
+    <section id="education" class="section education">
+        <h2>FORMAÇÃO</h2>
+        <p>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNINTER. Disponho de inglês avançado e francês básico.</p>
+    </section>
+
+    <!--"Portfólio" -->
+    <section id="portfolio" class="section portfolio">
+        <h2>PORTFÓLIO</h2>
+        <div class="portfolio-item">
+            <div>
+                <!--projeto do cardápio-->
+                <img src="images/cardapioItaliano.png" alt="Foto do Projeto 1">
+                <p><a href="https://bruemilyy.github.io/cardapioItaliano/" style="color: white; text-decoration: none;">PROJETO 1: CARDÁPIO</a></p>
+                <p>Tive a experiência da criação de um cardápio básico em um bootcamp realizado introduzindo o HTML e CSS.</p>
+            </div>
+            <div>
+                <!-- projeto da página de login-->
+                <img src="images/paginaLogin.png" alt="Foto do Projeto 2">
+                <p><a href="https://bruemilyy.github.io/paginaLogin/" style="color: white; text-decoration: none;">PROJETO 2: PÁGINA DE LOGIN</a></p>
+                <p>Projeto realizado no mesmo bootcamp com a finalidade de ensinar outros comandos com o HTML, consiste em uma página básica de login.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--"Contato" -->
+    <section id="contact" class="section contact">
+        <h2>CONTATO</h2>
+        <form>
+            <input type="text" name="nome" placeholder="NOME:" required>
+            <input type="email" name="email" placeholder="E-MAIL:" required>
+            <textarea name="mensagem" rows="5" placeholder="MENSAGEM:" required></textarea>
+            <!-- botão de envio -->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <!--ícone do instagram-->
+    <p><img src="images/instagram_icon.png" alt="Ícone do Instagram" width="20"></p>
+    <!-- link para o Instagram-->
+    <p><a href="https://www.instagram.com/bruemilyy" style="color: white; text-decoration: none;">@bruemilyy</a></p>
+</footer>
+
+</body>
+</html>
